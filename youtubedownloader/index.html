@@ -1,0 +1,62 @@
+<!DOCTYPE HTML>
+<html prefix="og: http://ogp.me/ns#">
+	<head>
+		<title>Youtube Downloader React</title>
+		<meta charset="utf-8">
+		<meta content='#eb1c26' name='theme-color'/>
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<meta name="mobile-web-app-capable" content="yes">
+		<meta name="title" content="Youtube Downloader React">
+		<meta property="og:url" content="https://sankalpsoftwares.azurewebsites.net/youtubedownloader">
+		<meta property="og:image" content="http://sankalpsoftwares.azurewebsites.net/youtubedownloader/images/chrome-touch-icon-384x384.png">
+		<meta property="og:image:secure_url" content="https://sankalpsoftwares.azurewebsites.net/youtubedownloader/images/chrome-touch-icon-384x384.png" />
+		<meta property="og:image:type" content="image/png" />
+		<meta name="description" content="Enter Youtube Url and Download">
+		<link rel="manifest" href="./manifest.json">
+		<link rel="icon" href="./images/chrome-touch-icon-192x192.png" sizes="192x192" type="image/png">
+		<link rel="icon" href="./images/chrome-touch-icon-384x384.png" sizes="384x384" type="image/png">
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+		<link rel="stylesheet" href="style.min.css">
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/sweetalert/1.1.3/sweetalert.min.css">
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+		<script async src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+		<script async src="https://cdnjs.cloudflare.com/ajax/libs/sweetalert/1.1.3/sweetalert.min.js"></script>
+	</head>
+	<body>
+		<div class="loader">
+			<div>
+				Youtube Downloader React
+			</div>
+			<svg viewBox="0 0 32 32" width="32" height="32">
+				<circle class="spinner" cx="16" cy="16" r="14" fill="none"></circle>
+			</svg>
+		</div>
+		<div class="container main" id='root'></div>
+		<script src="./react.min.js"></script>
+		<script src="https://npmcdn.com/react-dom@15.3.1/dist/react-dom.min.js"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/babel-core/5.8.34/browser.min.js"></script>
+		<script src="./script.js" type="text/babel"></script>
+		<script>
+			$("#root").removeClass("main");
+			$(".loader").addClass("hide-loader");
+		</script>
+	</body>
+	<script>
+		(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+				(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+				m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+			})(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+			ga('create', 'UA-51424701-2', 'auto');
+			ga('send', 'pageview');
+	</script>
+	<script>
+		if ('serviceWorker' in navigator) {
+				console.log("Will the service worker register?");
+				navigator.serviceWorker.register('service-worker.js').then(function(reg){
+					console.log("Yes, it did with scope:"+reg.scope);
+				}).catch(function(err) {
+					console.log("No it didn't. This happened: ", err)
+				});
+			}
+	</script>
+</html>
